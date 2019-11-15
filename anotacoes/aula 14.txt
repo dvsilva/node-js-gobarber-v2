@@ -1,0 +1,4 @@
+AULA 14
+- implementando autenticação
+- instalar dependência do JWT -> yarn add jsonwebtoken
+- criar controller session

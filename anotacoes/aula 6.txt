@@ -1,0 +1,71 @@
+AULA 6
+- eslint, prettier e editor config
+  - padronizar a escrita do código
+  - padrão da airbnb
+- eslint
+  - instalação -> yarn add eslint -D
+  - inicializar -> yarn eslint --init
+  - escolher as opções
+    - To check syntax, find problems, and enforce code style
+    - JavaScript modules (import/export)
+    - None of these
+    - N (sobre usar type script)
+    - Browser (espaço) Node (espaço)
+    - Use a popular style guide
+    - airbnb
+    - JavaScript
+    - Y
+  - remover package-lock.json
+  - rodar comando yarn
+- modificar arquivo settings.json
+  - incluir após editor.rules
+  "eslint.autoFixOnSave": true,
+   "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  - personalizar o arquivo .eslintrc.js sobrescrevendo algumas regras
+    -  rules: {
+        "prettier/prettier": "error", // problemas no prettier retorna erro
+        "class-methods-use-this": "off", //desobriga uso do this nas classes
+        "no-param-reassign": "off", // receber parâmetro e permitir altera-lo
+        camelcase: "off", //desabiliar camelcase nas variáveis
+        "no-unused-vars": ["error", { argsIgnorePattern: "next" }] // não reclama quanod a variavel dos middleware s não se chamar next
+      }
+- prettier (deixa o codigo mais bonito - linha de código grande etc)
+  - instalação do prettier -> yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+  - personalizar o arquivo .eslintrc.js sobrescrevendo algumas regras
+    -  extends: ["airbnb-base", "prettier"],
+       plugins: ["prettier"]
+  - criar arquivo .prettierrc para sobrescrever regras do aribnb
+    - {
+      "singleQuote": true,
+      "trailingComma": "es5"
+    }
+- formatar arquivos automaticamente -> yarn eslint --fix src --ext .js
+- configuração para editores diferentes na equipe -> editor config
+  - clica com direito > generate editorconfig
+    root = true
+
+    [*]
+    indent_style = space
+    indent_size = 2
+    charset = utf-8
+    trim_trailing_whitespace = true
+    insert_final_newline = true
+
+

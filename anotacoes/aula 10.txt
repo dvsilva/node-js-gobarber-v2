@@ -1,0 +1,4 @@
+AULA 10
+- criação do arquivo index.js dentro de database para carregar os models
+  -  criar arquivo index.js dentro de src/database
+- alterar arquivo routes para criar e retornar usuário

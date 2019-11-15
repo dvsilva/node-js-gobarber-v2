@@ -1,0 +1,3 @@
+AULA 9
+- criação do model de usuário
+  -  criar arquivo User.js dentro de src/models

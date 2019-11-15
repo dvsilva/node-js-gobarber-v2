@@ -1,0 +1,6 @@
+AULA 16
+- implementação do médoto update de user controller
+- receber os dados e validar se
+  - não existe email cadastrado
+  - a senha antiga [oldPassword] bate com a senha atual do BD
+  - atualiza cadastro e envia resposta

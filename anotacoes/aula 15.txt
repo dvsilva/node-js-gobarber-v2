@@ -1,0 +1,12 @@
+AULA 15
+- middleware de autenticação
+- criar update no user controller
+- criar rota para o update
+- criar middleware de autenticação
+  - arquivo auth.js na pasta app/middleware
+  - pegar o token -> req.headers.authorization
+  - validar o token
+  - retornar o id do usuário em req.userId
+- no imnonia
+  - pode colocar no header -> "Authorization: Bearer xxxx" ou
+  - na aba bearer -> bearer token -> colocar em token

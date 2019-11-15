@@ -1,0 +1,20 @@
+AULA 2
+- import e export
+  - nova forma import express from 'express'; 
+  - require é antiga do command js
+- adicionar nodemon e sucrase como dependência de desenvolvimento
+  - yarn add sucrase nodemon -D
+- executar
+  - se rodar node src/server.js da erro
+  - rodar com sucrase -> yarn sucrase-node scr/server.js
+  - configurar rodar com nodemon, no package.json (não roda com sucrase apenas com o node)
+    "scripts": {
+      "dev": "nodemon src/server.js"
+    }
+  - criar arquivo nodemon.json na raiz do projeto com:
+    {
+      "execMap": {
+        "js": "sucrase-node"
+      }
+    }
+  - executar: yarn dev

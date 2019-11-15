@@ -1,0 +1,4 @@
+AULA 11
+- criação do controller UserController.js dentro da pasta controllers
+  - criar metodo de criação (store) do usuário no controller
+  - modificar o arquivo routes com a rota desejada

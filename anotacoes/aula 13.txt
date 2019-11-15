@@ -1,0 +1,12 @@
+AULA 13
+- conceitos de JWT (Json Web Token)
+- metodologia de fazer API REST para autenticação
+- não faz através de sessão, método convencional
+- exemplo
+  - rota post "/session"
+  - manda email e senha
+  - verifica se esta correto
+  - que envia token que é separado por pontos e composto de:
+    - headers -> informações de qual tipo de token, algoritmo de criptografia ..
+    - payload -> dados do usuário ou adicionais
+    - assinatura -> garante que não foi modificado

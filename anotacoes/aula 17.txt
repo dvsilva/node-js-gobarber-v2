@@ -1,0 +1,5 @@
+AULA 17
+- validando dados de entrada
+- instalar biblioteca -> yarn add yup
+- criar validation no usercontroller e sessioncontroller
+- criar schemas e executar schema.isValid(req.body)

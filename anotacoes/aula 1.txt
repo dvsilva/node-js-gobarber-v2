@@ -1,0 +1,11 @@
+AULA 1
+- criando novo projeto
+  - criando pasta - mkdir gobarber
+  - criar projeto - yarn init -y
+  - adicionando express - yarn add express
+  - criar pasta src
+    - criar arquivo app.js
+    - criar arquivo routes.js
+    - criar arquivo server.js
+  - rodar projeto -> node src/server.js
+- opcional -> adicionar extensão jsonviewer par google chrome

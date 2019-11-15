@@ -1,0 +1,28 @@
+AULA 4
+- instalação do docker -> docker ce
+- docker toolbox
+  - versão antiga do docker
+  - se não tiver requerimentos
+  - usa o virtualbox
+- verificar se está instalado -> docker -v
+- ajuda do docker -> docker --help
+- criar serviços -> docker postgres (https://hub.docker.com/_/postgres)
+  - para remover se existir -> docker rm [id]
+  - docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+  - docker ps -> ver conteiners
+- cliente para postgres
+  - postbird (https://electronjs.org/apps/postbird)
+    - instalação 
+      - via dpkg
+        - sudo dpkg -i Postbird_0.8.2_amd64.deb ou
+      - via rpm
+        - sudo apt-get install alien
+        - sudo alien Postbird-0.8.2.x86_64.rpm 
+        - dpkg -i postbird_0.8.2-81_amd64.deb
+  - executar: localhost, 5432, postgres, docker > save and connect
+  - criar database "gobarber"
+  - comandos do docker
+    - parar de forma brusca -> docker stop database
+    - visualizar containers mesmo parados -> docker ps -a
+    - iniciar conainer -> docker start database
+    - visualizar logs -> docker logs
