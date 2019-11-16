@@ -1,28 +1,14 @@
 AULA 3
-- Docker
-  - criação de ambientes isolados (container)
-  - criação de subsistemas que não interferem no sistema e outros cointainers
-  - expõe portas para comunicação
-- conceitos
-  - imagens -> serviço disponível do docker / ferramentas e tecnoligias que podemos colocar dentro de container
-  - container -> instância de uma imagem
-  - docker registry (docker hub) -> onde encontramos as imagens
-    - docker file -> receita pra montar a própria imagem / ambiente do zero
-  - npm js -> onde estão os registros / as dependências do node
-
-Exemplo de docker file
-# Partimos de uma imagem existente
-FROM node:10
-
-Definimos a pasta e copiamos os arquivos
-WORKDIR /usr/app
-COPY . ./
-
-#Instalamos as dependências
-RUN yarn
-
-# Qual porta queremos expor?
-EXPOSE 3333
-
-# Executamos nossa aplicação
-CMD yarn start
+- criar listagem de providers
+- criar controller ProviderController
+  - criar método index para buscar providers
+  - filtrar campos a serem retornados
+- referenciar metodo index no arquivo routes
+  - criar get /providers retornarndo metodo index de ProviderController
+- criar codinome para campo avatar_id no model User
+- criar atributo para retornar caminho do arquivo no model File
+- configurar arquivo app permitir visualizar imagens dos avatars
+  - this.server.use(
+      '/files',
+      express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
+    );
