@@ -1,11 +1,13 @@
 AULA 1
-- criando novo projeto
-  - criando pasta - mkdir gobarber
-  - criar projeto - yarn init -y
-  - adicionando express - yarn add express
-  - criar pasta src
-    - criar arquivo app.js
-    - criar arquivo routes.js
-    - criar arquivo server.js
-  - rodar projeto -> node src/server.js
-- opcional -> adicionar extensão jsonviewer par google chrome
+- upload de arquivos
+  - duas formas de desenvolver
+  - enviar junto com o cadastro
+  - de maneira isolada backend retorna id da imagem, mantendo estrutura do JSON
+- lidar com arquvivos -> formato multpart formdata
+- instalando o multer -> yarn add multer
+- configurando o projeto
+  - criar pasta tmp/uploads na raiz do projeto
+  - criar arquivo multer.js na pasta src/config
+    - é possível configurar cdn (content delivery network)
+      - servidores para ulpoad de arquivos físicos como o como amazon s3
+  - adicionar rota para upload do arquivo
