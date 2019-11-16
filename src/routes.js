@@ -4,6 +4,7 @@ import multerConfig from './config/multer';
 
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
+import FileController from './app/controllers/FileController';
 
 import authMiddleware from './app/middleware/auth';
 
@@ -20,8 +21,23 @@ routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
+routes.post('/files', upload.single('file'), FileController.store);
+
+/**
 routes.post('/files', upload.single('file'), (req, res) => {
-  return res.json({ ok: true });
+  // req.file
+   {
+    "fieldname": "file",
+    "originalname": "banco-tama-ht10s-rhythm-mate-drum-throne-compacto-e-mais-leve4381..jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\danyl\\OneDrive\\Desktop\\Rocketseat\\bootcamp 2\\nodejs\\gobarber-v2\\tmp\\uploads",
+    "filename": "5131e1e5f737e720d407b00f7bd74f14.jpg",
+    "path": "C:\\Users\\danyl\\OneDrive\\Desktop\\Rocketseat\\bootcamp 2\\nodejs\\gobarber-v2\\tmp\\uploads\\5131e1e5f737e720d407b00f7bd74f14.jpg",
+    "size": 39717
+  }
+  return res.json(req.file);
 });
+*/
 
 export default routes;

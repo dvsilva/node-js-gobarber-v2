@@ -1,20 +1,13 @@
 AULA 2
-- import e export
-  - nova forma import express from 'express'; 
-  - require é antiga do command js
-- adicionar nodemon e sucrase como dependência de desenvolvimento
-  - yarn add sucrase nodemon -D
-- executar
-  - se rodar node src/server.js da erro
-  - rodar com sucrase -> yarn sucrase-node scr/server.js
-  - configurar rodar com nodemon, no package.json (não roda com sucrase apenas com o node)
-    "scripts": {
-      "dev": "nodemon src/server.js"
-    }
-  - criar arquivo nodemon.json na raiz do projeto com:
-    {
-      "execMap": {
-        "js": "sucrase-node"
-      }
-    }
-  - executar: yarn dev
+- criação do FileController
+- criar migration para adicionar nome do arquivo
+  - yarn sequelize migration:create --name=create-files
+  - yarn sequelize db:migrate
+- criar model File
+- incluir File no arquivo /database/index.js
+- criar migration para relacionar arquivo ao usuário
+  - yarn sequelize migration:create --name=add-avatar-field-to-users
+  - yarn sequelize db:migrate
+- associar arquivo ao usuario
+  - criar método associate
+  - modificar arquivo /database/index.js com map de associate
