@@ -1,2 +1,3 @@
 AULA 5
 - criar rota de appointment
+- criar método store para armazenar o agendamento
