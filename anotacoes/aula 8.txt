@@ -1,6 +1,4 @@
 AULA 8
-- migration de usuários
-- criar -> yarn sequelize migration:create --name=create_users
-- executar -> yarn sequelize db:migrate
-  - tabela sequelizemeta: controle da migration para saber quais foram e não foram executadas
-- desfazer migration -> yarn sequelize db:migrate:undo ou yarn sequelize db:migrate:undo:all (desfaz todas as migrations)
+- implementar paginação de appointments
+  - query params (parâmetro page)
+  - incluir na consulta: limit e offset
