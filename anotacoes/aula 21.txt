@@ -1,3 +1,13 @@
 AULA 21
--
+- tratamento de exceções
+- erros de fila, query, banco de dados
+- ferramenta de monitoramento de erros
+  - sentry e bugsnag
+  - criar conta sentry
+  - criar novo projeto -> selecionar express (ou node)
+- instalar sentry no projeto
+  - sentry -> yarn add @sentry/node@5.9.0
+  - app.js -> configurar arquivo para usar o sentry
+  - express-async-error -> yarn add express-async-errors
+  - youch para visualização de erros -> yarn add youch
 
