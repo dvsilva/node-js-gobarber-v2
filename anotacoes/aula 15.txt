@@ -1,12 +1,10 @@
 AULA 15
-- middleware de autenticação
-- criar update no user controller
-- criar rota para o update
-- criar middleware de autenticação
-  - arquivo auth.js na pasta app/middleware
-  - pegar o token -> req.headers.authorization
-  - validar o token
-  - retornar o id do usuário em req.userId
-- no imnonia
-  - pode colocar no header -> "Authorization: Bearer xxxx" ou
-  - na aba bearer -> bearer token -> colocar em token
+- configurando Nodemailer para enviar e-mail quando houver cancelamento do agendamento
+- instalar Nodemailer -> yarn add nodemailer
+- criar arquivo config/mail.js com configuração de envio de e-mail
+- serviços de envio de e-mail
+  - Amazon SES, Mailgun, Sparkpost, Mandril (mailchimp), Gmail (limite/bloqueio)
+  - Mailtrap (para desenvolvimento) -> https://mailtrap.io/
+     - create inbox -> GoBarber
+- criar arquivo lib/Mail.js responsável por enviar os e-mails com configuração do arquivo config/mail.js
+- no método delete do AppointmentController invocar método Mail.sendEmail para enviar o e-mail
