@@ -1,2 +1,5 @@
 AULA 14
 - cancelamento de agendamento com 2 horas de antecedência
+- criar rota delete para appointment controller método delete
+- criar método delete para setar o atributo canceled_at confirmando cancelamento do agendamento
+- validar se usuário logado é o dono do agendamento e se data está duas horas antes do agendamento
