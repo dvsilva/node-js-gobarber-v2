@@ -1,3 +1,10 @@
 AULA 19
--
-
+- listando horários disponíveis
+- rota para horarios disponiveis de um prestador dentro de um dia
+  - verficar se data já passou
+  - retirar horários com agendamentos já cadastrados
+  - considerar horários de 8 à 18h
+- pegar timestamp
+  - google chrome -> console -> new Date().getTime()
+- criar AvailableController e método index
+- configurar rota get para o novo controller

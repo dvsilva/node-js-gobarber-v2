@@ -13,8 +13,6 @@ class ProviderController {
 
     return res.json(providers);
   }
-
-  async update(req, res) {}
 }
 
 export default new ProviderController();
