@@ -1,4 +1,5 @@
 AULA 12
-- gerar hash para senha
-- instalar a dependência bcrypt -> yarn add bcryptjs
-- implementar hook beforeSave para salvar no atributo password_hash a senha criptografada
+- listando notificações do usuário
+- criar NotificationController
+- criar rota get para NotificationController método index
+-
