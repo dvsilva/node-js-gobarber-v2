@@ -1,4 +1,2 @@
 AULA 14
-- implementando autenticação
-- instalar dependência do JWT -> yarn add jsonwebtoken
-- criar controller session
+- cancelamento de agendamento com 2 horas de antecedência
