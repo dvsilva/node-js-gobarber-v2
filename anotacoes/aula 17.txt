@@ -1,5 +1,31 @@
 AULA 17
-- validando dados de entrada
-- instalar biblioteca -> yarn add yup
-- criar validation no usercontroller e sessioncontroller
-- criar schemas e executar schema.isValid(req.body)
+- configurando fila com Redis
+- como diminuir tempo de resposta para rotas que enviam e-mails?
+- tirando await ele não espera o e-mail
+  - se der erro não tem o controle das ações / não vai saber
+- filas / backgroung jobs (trabalhos em segundo plano)
+  - configurar serviços em segundo plano
+  - executam trabalhos que levam mais tempo mas não vão modificar a resposta
+  - precisa de banco chave-valor -> Redis
+- instalando redis no docker
+  - docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+  - apline -> redis com as features mais essenciais do linux por isso é super leve
+- instalar bee-queue -> yarn add bee-queue
+  - não tem prioridade (usar Kue pois tem mais robustez)
+- criar arquivo Queue.js dentro da pasta lib para gerenciar as filas
+- criar arquivo CancellationMail.js dentro da pasta jobs para enviar os e-mails de cancelamento
+- criar arquivo redis.js dentro da pasta config para configurar conexão do redis
+- criar arquivo queue.js dentro da pasta src para gerenciar as filas
+  - processa as filas
+  - não executa a aplicação na mesma [node] execução da fila
+  - pode executar a fila em outro servidor, core do processador com mais ou menos recursos
+  - totalmente separado da aplicação
+  - fila nunca vai influenciar na performance da aplicação
+  - rodar fila em outro terminal
+    -> node src/queue.js // problema porque não está usando o sucrase
+    -> configurar package.json para rodar o sucrase sobre o arquivo
+      - "scripts": {
+        "dev": "nodemon src/server.js",
+        "queue": "nodemon src/queue.js"
+      }
+    -> rodar -> yarn queue
