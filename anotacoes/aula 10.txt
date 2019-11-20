@@ -1,4 +1,13 @@
 AULA 10
-- criação do arquivo index.js dentro de database para carregar os models
-  -  criar arquivo index.js dentro de src/database
-- alterar arquivo routes para criar e retornar usuário
+- configurando MongoDB
+  - banco não relacional
+  - dados não estruturados, não ter relacionamentos
+  - performático
+- subindo contanier
+  - docker run --name mongobarber -p 27017:27017 -d -t mongo
+  - docker ps -> lista containers que estão rodando
+  - docker ps -a -> lista mesmo se não estiver rodando
+  - docker logs [id_contanier] -> lista logs do container
+- instalar mongoose (como o sequalize pro postgres ou mysql)
+  - yarn add mongoose
+- configurar mongodb no arquivo database/index.js
