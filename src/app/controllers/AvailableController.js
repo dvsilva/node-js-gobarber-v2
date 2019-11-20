@@ -1,5 +1,3 @@
-import User from '../models/User';
-import File from '../models/File';
 import {
   startOfDay,
   endOfDay,
@@ -9,6 +7,7 @@ import {
   format,
   isAfter,
 } from 'date-fns';
+
 import { Op } from 'sequelize';
 import Appointment from '../models/Appointment';
 

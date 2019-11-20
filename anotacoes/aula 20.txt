@@ -1,3 +1,6 @@
 AULA 20
--
+- campos virtuais no agendamento
+- incluir informações adicionais
+  - criar campo "past" no model appointment para dizer se trata agendamento passados
+  - criar campo 'cancelable' no model appointment para dizer agendamento está a 2 horas de acontecer
 
