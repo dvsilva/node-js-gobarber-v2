@@ -1,3 +1,5 @@
 AULA 9
-- criação do model de usuário
-  -  criar arquivo User.js dentro de src/models
+- listando agenda do prestador
+  - criar scheduleController
+  - criar rota para o método index
+  - criar consulta de agendamentos por usuário e data (via query params)
