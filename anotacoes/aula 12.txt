@@ -2,4 +2,3 @@ AULA 12
 - listando notificações do usuário
 - criar NotificationController
 - criar rota get para NotificationController método index
--
