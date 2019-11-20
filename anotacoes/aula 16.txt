@@ -1,6 +1,10 @@
 AULA 16
-- implementação do médoto update de user controller
-- receber os dados e validar se
-  - não existe email cadastrado
-  - a senha antiga [oldPassword] bate com a senha atual do BD
-  - atualiza cadastro e envia resposta
+- configurando templates de e-mail para enviar e-mail personalizados (usando HTML e CSS)
+- instalar duas extensões para utilizar 'template engines'
+  - template engine -> arquivos html que podem receber variáveis do node
+  - yarn add express-handlebars nodemailer-express-handlebars
+- criar estrutura de pastas views\emails\layouts e views\emails\partials e
+- configurar arquivo Mail.js para usar as template engines no método configureTemplates
+- criar arquivo default.hbs e footer.hbs como partes do e-mail para ser reutilizado
+- criar arquivo views\emails\cancellation.hbs
+- configurar envio de e-mail do controller passando os parâmetros
