@@ -1,2 +1,6 @@
 AULA 18
--
+- monitorando falhas na fila
+- lidar com falhas na fila
+  - adicionar ao método processQueue opção on 'failed'
+   -> bee.on('failed', this.handleFailure).process(handle);
+   -> criar método handleFailure
