@@ -1,3 +1,9 @@
 AULA 22
--
-
+- variáveis ambiente
+- criar arquivo .env
+  - responsável por guardar o valor das variáveis
+  - nome = valor
+  - adicionar ao gitignore
+  - instalar dependência para user .env -> yarn add dotenv
+  - criar arquivo .env e .env.example
+  - atualizar referências no projeto
