@@ -1,4 +1,14 @@
 AULA 11
-- criação do controller UserController.js dentro da pasta controllers
-  - criar metodo de criação (store) do usuário no controller
-  - modificar o arquivo routes com a rota desejada
+- notificando novos agendamentos
+- enviar notificação pro prestador toda vez que receber um novo agendamentos
+- schema (parecido com o model)
+  - schema free -> liberdade de schema (ex. pode não ter coluna)
+  - cuidado com relação a migração
+  - notificações -> não tem muitos relacionamentos
+  - não tem migration / não precisa fazer importação/load dos models
+- criar pasta app/schemas
+  - criar arquivo Notification.js
+- criar notification no appointmentController no método store
+- para visualizar os dados do mongodb
+  -  mongodb compass community
+  - criar db "gobarber"
