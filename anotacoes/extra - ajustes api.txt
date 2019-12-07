@@ -1,0 +1,8 @@
+AULA MÓDULO REACTJS BARBERWEB
+- adicionar módulo cors -> yarn add cors
+  - permitir aplicações acessar API
+  - determinar endereços
+- editar arquivo app.js - adicionar em middlewares this.server.use(cors());
+- editar SessionController -> editar para retornar dados do avatar do usuario
+- editar UserController -> retornar dados do avatar durante edição
+- editar ScheduleController -> retornar dados do usuario (nome)

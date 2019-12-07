@@ -7,6 +7,7 @@ import Youch from 'youch';
 import routes from './routes';
 import './database';
 import path from 'path';
+import cors from 'cors';
 
 import * as Sentry from '@sentry/node';
 import sentryConfig from './config/sentry';
@@ -25,6 +26,10 @@ class App {
   middlewares() {
     // sentry - The request handler must be the first middleware on the app
     this.server.use(Sentry.Handlers.requestHandler());
+
+    // configuração cors
+    this.server.use(cors()); // para ambiente desenvolvimento
+    //this.server.use(cors({ origin: 'http://rocketseat.com.br' }));
 
     this.server.use(express.json());
     // permitir visualizar imagens dos avatars
