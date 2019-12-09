@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import User from '../models/User';
+import File from '../models/File';
 
 class UserController {
   async store(req, res) {
@@ -24,7 +25,7 @@ class UserController {
     }
 
     // const user = await User.create(req.body);
-    //return res.json(user);
+    // return res.json(user);
     // filtrar dados para retorno
     const { id, name, email, provider } = await User.create(req.body);
     return res.json({ id, name, email, provider });
@@ -37,11 +38,11 @@ class UserController {
       oldPassword: Yup.string().min(6),
       password: Yup.string()
         .min(6)
-        .when('oldPassword', (oldPassword, filed) =>
-          oldPassword ? filed.required() : field
+        .when('oldPassword', (oldPassword, field) =>
+          oldPassword ? field.required() : field
         ),
-      confirmPassword: Yup.string().when('password', (password, filed) =>
-        password ? filed.required().oneOf([Yup.ref('password')]) : field
+      confirmPassword: Yup.string().when('password', (password, field) =>
+        password ? field.required().oneOf([Yup.ref('password')]) : field
       ),
     });
 
@@ -54,7 +55,7 @@ class UserController {
 
     const user = await User.findByPk(req.userId);
 
-    if (email != user.email) {
+    if (email !== user.email) {
       const userExists = await User.findOne({
         where: { email: req.body.email },
       });
@@ -78,7 +79,7 @@ class UserController {
       ],
     });
 
-    //return res.json({ ok: true });
+    // return res.json({ ok: true });
     return res.json({ id, name, email, avatar });
   }
 }
